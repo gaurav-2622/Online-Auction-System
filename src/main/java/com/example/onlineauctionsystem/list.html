@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Auction List</title>
+</head>
+<body>
+<h1>Available Auctions</h1>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Starting Price</th>
+        <th>Actions</th>
+    </tr>
+    <tr th:each="auction : ${auctions}">
+        <td th:text="${auction.title}"></td>
+        <td th:text="${auction.description}"></td>
+        <td th:text="${auction.startingPrice}"></td>
+        <td><button onclick="bid(${auction.id})">Place Bid</button></td>
+    </tr>
+</table>
+
+<script>
+    function bid(auctionId) {
+        // Call WebSocket or REST API to place bid
+    }
+</script>
+</body>
+</html>
