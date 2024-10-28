@@ -1,3 +1,5 @@
+Spring Boot Online Auction System
+
 • Allows users to list items for bidding and place bids on various auctions.
 • Provides secure bidding with real-time updates on auction status, ensuring only authorized users can
   participate.
